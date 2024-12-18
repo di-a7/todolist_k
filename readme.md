@@ -19,3 +19,35 @@ python manage.py startapp todo
 
 <!-- run django -->
 python manage.py runserver
+
+<!-- requirements file create -->
+pip freeze > requirements.txt
+
+<!-- requirements file install -->
+pip install -r requirements.txt
+
+<!-- to open python shell -->
+python manage.py shell
+
+<!-- create data -->
+MODEL_NAME.objects.create(field1= "..", field2 = "...")
+
+<!-- get all the data of the model -->
+MODEL_NAME.objects.all()
+
+<!-- get single data -->
+MODEL_NAME.objects.get(id = 1)
+<!-- single data lai kunai veriable ma save garna milxa ani tai variable lai use 
+garirw we can perform CRUD operation(Create Retrive Update Delete) -->
+variable = MODEL_NAME.objects.get(id = 1)
+variable.field_name
+variable.field_name = "..."
+
+<!-- filter data -->
+MODEL_NAME.objects.filter(fields1 = ..., fields2 =...)
+
+<!-- save data -->
+MODEL_NAME.save()
+
+<!-- delete -->
+MODEL_NAME.delete()
